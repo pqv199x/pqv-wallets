@@ -80,11 +80,8 @@ export default class LedgerWallet extends GenericWallet {
 
     async signTransaction(txParams, stringified = false) {
         try {
-            console.log(txParams)
             const rawTx = new Transaction(txParams)
-            console.log(22222)
             const chainId = txParams.chainId || 1
-            console.log(3333)
             rawTx.v = Buffer.from([chainId])
 
             const serializedRawTx = rawTx.serialize().toString('hex')
@@ -98,13 +95,14 @@ export default class LedgerWallet extends GenericWallet {
                     signature[key] = '0x' + signature[key]
                 }
             }
-            dataTx['signature'] = signature
-            const tx = new Transaction(dataTx)
+            
+            const tx = new Transaction({ ...txParams, ...signature })
 
             return stringified ? `0x${tx.serialize().toString('hex')}` : tx
 
         } catch (error) {
             console.log('PQV-Wallets Cannot sign transaction')
+            console.log(txParams)
             console.log(error)
         }
     }
