@@ -1,14 +1,30 @@
 {
   "name": "pqv-wallets",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Interact with TomoChain wallets easily",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pqv199x/pqv-wallets.git"
+  },
   "scripts": {
     "start": "webpack-dev-server ./src/index.js",
     "dist": "webpack"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Vu Q. Pham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pqv199x/pqv-wallets/issues"
+  },
+  "homepage": "https://github.com/pqv199x/pqv-wallets",
+  "keywords": [
+    "tomochain",
+    "ethereum",
+    "javascript",
+    "wallet",
+    "vuqp",
+    "software-wallet"
+  ],
   "dependencies": {
     "@ledgerhq/hw-app-eth": "^4.68.4",
     "@ledgerhq/hw-transport-u2f": "^4.68.4",

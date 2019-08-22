@@ -1,5 +1,5 @@
 import LedgerWallet from './LedgerWallet'
 
-export default {
+export {
     LedgerWallet,
 }
