@@ -1,22 +1,26 @@
 export default class GenericWallet {
 
-  constructor () {
+    constructor() {
 
-  }
+    }
 
-  open() {
+    open() {
 
-  }
+    }
 
-  signMessage() {
+    getAddress() {
 
-  }
+    }
 
-  verifyMessage() {
+    signMessage() {
 
-  }
+    }
 
-  signTransaction() {
+    verifyMessage() {
 
-  }
+    }
+
+    signTransaction() {
+
+    }
 }
